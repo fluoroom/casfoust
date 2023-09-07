@@ -6,13 +6,11 @@ import RadioStatus from "./RadioStatus";
 
 const Icecast = () => {
   const stream = {
-    icecast: {
-      host: process.env.ICHOST,
-      port: process.env.ICPORT,
-    },
-  };
-  const source = `${stream.icecast.host}:${stream.icecast.port}/stream`;
-  const datasource = `${stream.icecast.host}:${stream.icecast.port}/status-json.xsl`;
+    host: 'http://phillippplein.ddns.net',
+    port: 8443,
+};
+  const source = `${stream.host}:${stream.port}/stream`;
+  const datasource = `${stream.host}:${stream.port}/status-json.xsl`;
   const [radiostatus, setradiostatus] = useState(0);
 
   useEffect(() => {
@@ -21,7 +19,6 @@ const Icecast = () => {
         .then((result) => result.json())
         .then((result) => {
           if (result.icestats.source.server_url == "casfoust.cf") {
-            console.log(result);
             if (result.icestats.source) {
               if (radiostatus !== 2) {
                 setradiostatus(2);
@@ -63,5 +60,6 @@ const Icecast = () => {
     </>
   );
 };
+
 
 export default Icecast;

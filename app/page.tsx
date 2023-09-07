@@ -5,7 +5,7 @@ import Icecast from "../src/components/Icecast"
 import StyledLink from "../src/components/StyledLink"
 
 const IndexPage = () => {
-  useEffect(()=>{document.title="CASFOUST";console.log('casfoust')},[])
+  useEffect(()=>{document.title="CASFOUST";},[])
   return (
     <Layout>
       <Icecast />
