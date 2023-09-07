@@ -39,11 +39,10 @@ const Icecast = () => {
           }
         });
     }
-    //getradiodata();
-    //const interval = setInterval(() => getradiodata(), 5000);
-    setradiostatus(0);
+    getradiodata();
+    const interval = setInterval(() => getradiodata(), 5000);
     return () => {
-      //clearInterval(interval);
+      clearInterval(interval);
     };
   }, [radiostatus]);
 
