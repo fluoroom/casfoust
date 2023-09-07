@@ -1,10 +1,11 @@
 'use client'
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../src/components/Layout"
 import Icecast from "../src/components/Icecast"
 import StyledLink from "../src/components/StyledLink"
 
 const IndexPage = () => {
+  useEffect(()=>{document.title="CASFOUST";console.log('casfoust')},[])
   return (
     <Layout>
       <Icecast />

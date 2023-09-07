@@ -1,5 +1,5 @@
 'use client'
-import React from "react"
+import React,{useEffect} from "react"
 import Layout from "../../src/components/Layout"
 import styled from "styled-components"
 import Youtube from "../../src/components/YoutubeEmbed"
@@ -40,6 +40,8 @@ const Patches = () => {
     return Math.abs(Math.round(diff / 365.25))
   }
   const korgYears = diff_years(dt1, today)
+  
+  useEffect(()=>{document.title="MicroKORG Patches - CASFOUST"},[])
   return (
     <Layout>
       <style jsx>{`
