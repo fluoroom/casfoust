@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "pervitinadex";
+  src: url("/fonts/pervitinadex.woff2") format("woff2"),
+    url("/fonts/pervitinadex.woff") format("woff");
+  font-weight: BOLD;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto-mono";
+  src: url("/fonts/RobotoMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto-mono";
+  src: url("/fonts/RobotoMono-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  text-align: center;
+  font-family: "roboto-mono";
+  font-size: 16px;
+  margin: auto;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  margin: 1em auto 1.5em;
+  text-align: center !important;
+}
+main {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+main p,
+main h1,
+main h3,
+main h4,
+main ul {
+  max-width: 640px;
+  hyphens: none;
+  word-break: keep-all;
+  text-align: left;
+}
+main p,
+main ul {
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+main ul li {
+  list-style: square inside;
+}
+main h3 {
+  font-size: 1.2em;
+  line-height: 2em;
+}
+@media (max-width: 640px) {
+  p,
+  h2,
+  h3,
+  ul {
+    max-width: 90vw !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
