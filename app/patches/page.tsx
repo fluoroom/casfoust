@@ -3,11 +3,6 @@ import React,{useEffect} from "react"
 import Layout from "../../src/components/Layout"
 import styled from "styled-components"
 import Youtube from "../../src/components/YoutubeEmbed"
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'MicroKORG Patches - CASFOUST',
-}
 
 const Title = styled.h2`
   font-size: 2em;
